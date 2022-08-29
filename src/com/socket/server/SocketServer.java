@@ -24,7 +24,9 @@ public class SocketServer {
             @Override
             public void run() {
                  try {
-                    new SocketServer("localhost", 8090).startServer();
+                	 String ipServerAddr = "192.168.1.131";
+                     new SocketServer(ipServerAddr, 8090).startServer();
+                    //new SocketServer("localhost", 8090).startServer();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -32,6 +34,7 @@ public class SocketServer {
             }
         };
          
+        /*
         Runnable client = new Runnable() {
             @Override
             public void run() {
@@ -45,9 +48,10 @@ public class SocketServer {
                  
             }
         };
+        */
        new Thread(server).start();
-       new Thread(client, "client-A").start();
-       new Thread(client, "client-B").start();
+//       new Thread(client, "client-A").start();
+//       new Thread(client, "client-B").start();
     }
  
     public SocketServer(String address, int port) throws IOException {
