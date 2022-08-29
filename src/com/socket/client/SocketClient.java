@@ -13,6 +13,7 @@ public class SocketClient {
                 
         String sMyAddr = "192.168.1.167";
         InetSocketAddress hostAddress = new InetSocketAddress(sMyAddr, 8090);
+        //InetSocketAddress hostAddress = new InetSocketAddress("localhost", 8090);
         
         SocketChannel client = SocketChannel.open(hostAddress);
   
