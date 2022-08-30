@@ -24,8 +24,8 @@ public class SocketServer {
             @Override
             public void run() {
                  try {
-                	 String ipServerAddr = "192.168.1.131";
-                     new SocketServer(ipServerAddr, 8090).startServer();
+                	 String ipServerAddr = "192.168.0.74";
+                     new SocketServer(ipServerAddr, 9998).startServer();
                     //new SocketServer("localhost", 8090).startServer();
                 } catch (IOException e) {
                     e.printStackTrace();
